@@ -8,7 +8,7 @@ from collections import defaultdict
 # A primeira descrição na lista de cada produto é a que será exibida na interface.
 # As outras servem como palavras-chave para a busca interna.
 product_data = {
-    # Refrigerantes (Coca-Cola)
+    # Coca-Cola
     '110255': ['Coca-Cola Lata 220ml', 'coca 220'],
     '110130': ['Coca-Cola Lata 350ml', 'coca lt 350', 'coca lata'],
     '110574': ['Coca-Cola Lata 350ml Pack 6un', 'coca lt p6'],
@@ -168,6 +168,7 @@ product_data = {
     '113327': ['Água Crystal com Gás PET 1,5L', 'agua 1.5l c/gas'],
     '112824': ['Crystal Saborizada Maçã PET 510ml', 'crystal maca'],
     '112822': ['Crystal Saborizada Maracujá PET 510ml', 'crystal maracuja'],
+    '112826': ['Crystal Saborizada Limão PET 510ml', 'crystal limao'],
     '6549': ['Cilindro CO2 6kg', 'co2 6kg'],
     '115101': ['CO2 6kg (Recarga)', 'recarga co2'],
 
@@ -204,8 +205,8 @@ product_data = {
     '112911': ['Cerpa Export Long Neck 350ml', 'cerpa export'],
     '112801': ['Tijuca Puro Malte Lata 350ml', 'tijuca lata'],
     '112877': ['Therezópolis Gold Lata 350ml', 'therezopolis gold lt 350'],
-    '112820': ['Therezópolis Gold Lata 473ml', 'therezopolis gold lt 473'], # Código duplicado na lista original, unificado aqui
-    '112878': ['Therezópolis Gold Lata 473ml (Alternativo)', 'therezopolis gold lt 473 alt'], # Código duplicado na lista original, unificado aqui
+    '112820': ['Therezópolis Gold Lata 473ml', 'therezopolis gold lt 473'],
+    '112878': ['Therezópolis Gold Lata 473ml (Alternativo)', 'therezopolis gold lt 473 alt'],
     '112754': ['Therezópolis Gold Long Neck 355ml', 'therezopolis gold ln'],
     '112873': ['Therezópolis Gold Garrafa 500ml', 'therezopolis gold 500'],
     '112771': ['Therezópolis Gold Garrafa 600ml', 'therezopolis gold 600'],
@@ -262,7 +263,6 @@ product_data = {
     '115812': ['Mentos Pure Fresh Wintergreen Garrafa', 'mentos pure fresh wintergreen garrafa'],
     '115816': ['Mentos UP2U Garrafa', 'mentos up2u'],
 }
-
 
 # --- Preparação dos Dados para a Interface ---
 description_to_code_map = {aliases[0]: code for code, aliases in product_data.items()}
@@ -357,7 +357,6 @@ with col2:
             
             st.session_state.final_output = "\n".join(final_output_list)
             st.success("Pedido finalizado com sucesso! Veja o resultado abaixo.")
-            st.balloons()
 
 # Exibe o resultado final se ele existir
 if st.session_state.final_output:
