@@ -15,7 +15,7 @@ product_data = {
     '110658': ['Coca-Cola Lata 350ml Pack 12un', 'coca lt p12'],
     '110663': ['Coca-Cola PET 200ml', 'coca 200ml', 'cocacola mini'],
     '110122': ['Coca-Cola PET 600ml', 'coca 600'],
-    '110583': ['Coca-Cola Retornável PET 1L', 'coca ls', 'coca 1l retornavel'],
+    '110583': ['Coca-Cola Retornável LS Vidro 1L', 'coca ls', 'coca 1l vidro retornavel'],
     '110301': ['Coca-Cola PET 1,5L', 'coca 1,5l', 'coca 1.5'],
     '110440': ['Coca-Cola PET 2L', 'coca 2l'],
     '110584': ['Coca-Cola Retornável PET 2L', 'coca 2l retornavel'],
@@ -24,6 +24,7 @@ product_data = {
     '110140': ['Coca-Cola Retornável Vidro 200ml', 'coca rgb 200'],
     '110132': ['Coca-Cola Retornável Vidro 290ml (KS)', 'coca ks'],
     '110112': ['Coca-Cola Bag 18L (Postmix)', 'coca bag 18l'],
+    
 
     # Refrigerantes (Coca-Cola Zero/Sem Açúcar)
     '110256': ['Coca-Cola Sem Açúcar Lata 220ml', 'coca zero 220'],
@@ -362,3 +363,4 @@ with col2:
 if st.session_state.final_output:
     st.subheader("Resultado Final (Pronto para Copiar)")
     st.code(st.session_state.final_output, language="text")
+
